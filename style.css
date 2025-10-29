@@ -117,10 +117,13 @@ th, td {
 
     #filterForm {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
         padding: 10px;
         border-radius: 8px;
+    }
+    
+    #filterData {
+        margin-bottom: 10px;
     }
 
     #filterForm input[type="radio"] {
@@ -128,7 +131,7 @@ th, td {
     }
 
     #resetBtn {
-        flex: 1 1 100%;
+        width: 100%;
     }
 
 
