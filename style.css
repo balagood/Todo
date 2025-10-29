@@ -1,0 +1,161 @@
+body{
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.container{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1000px;
+    max-width: 1000px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+}
+
+.displayAmount{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+h1{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+input{
+    flex:1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #0056b3;
+}
+
+#filterData{
+    margin:10px;    
+}
+
+#filterForm{
+    margin-bottom: 0px;
+}
+/* table{
+    width:100%;
+    border-collapse: collapse;
+
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+} */
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    /*.displayAmount {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }*/
+
+    .displayAmount {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #filterForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #filterForm input[type="radio"] {
+        margin: 5px 0;
+    }
+
+    #resetBtn {
+        flex: 1 1 100%;
+    }
+
+
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    input,
+    select,
+    textarea {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    button {
+        flex: 1 1 100%;
+    }
+
+
+    th, td {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .table-container {
+    margin-bottom: 20px;
+  }
+
+}

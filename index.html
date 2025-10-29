@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Expense Calculator</h1>
+        <div class="displayAmount">
+            <p id="totalIncome">Total Income :</p>
+            <p id="totalExpense">Total Expense :</p>
+            <p id="netAmount">Net Amount :</p>
+            <form id="filterForm">
+                <div id="filterData">
+                    <input type="radio" id="all" name="filterType" value="all">All
+                    <input type="radio" id="incomeRadioBtn" name="filterType" value="income">Income
+                    <input type="radio" id="expense" name="filterType" value="expense">Expense
+                </div>
+                <button type="submit" class="action-btn reset-btn" id="resetBtn" style="margin:10px">Reset</button>
+                <!-- <button type="submit" id="searchBtn" style="margin-bottom: 10px;padding:2px;">Search</button> -->
+            </form>
+        </div>
+        <form id="incomeExpenseCalculator">
+            <select name="category" id="category">
+                <option value="">Select Category</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="text" name="income" id="income" placeholder="Income">
+            <textarea name="expenseDescription" id="expenseDescription" width="10" cols="30" id="expenseDescription" placeholder="Expense Description"></textarea>
+            <input type="text" name="amount" id="amount" placeholder="Amount (required)">
+            <button type="submit" id="submitBtn">Add</button>
+            
+        </form>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Category</th>
+                        <th>Income</th>
+                        <th>Expense Description</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="incomeTable"></tbody>
+             </table>
+        </div>
+        
+    </div>
+
+    <script src="localstorage.js"></script>
+</body>
+</html>
